@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KCCChassam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+    overflow: scroll;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.top-banner {
+    border-radius: 5px;
+    text-align : center;
+    padding: 1rem 0rem 1rem 0rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-shadow: 10px 10px 5px 0px #999999;
+}
+
+.makeToDo {
+    font-family: 'Pretendard-Regular';
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px 0px #999999;
+}
+
+.makeToDo > div > input {
+    min-width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.makeToDo > button {
+    font-family: 'Pretendard-Regular';
+    width: 10%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 25px;
+}
+
+.top-cont, .bot-cont {
+    background:url(./image/back.jpg);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    box-shadow: 10px 10px 5px 0px #999999;
+}
+
+.card-container{
+    height: 100%;
+    background-blend-mode: darken;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.something {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.card {
+    font-family: 'KCCChassam';
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 15px 0px;
+    min-height: 200px;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px;
+    position: relative;
+}
+
+.yet {
+    background-color: #ffff00;
+}
+
+.done {
+    background-color: #4fe5ff;
+}
+
+.card > div:first-child{
+    margin-bottom: 1rem;
+}
+
+.card-btn {
+    width: 88%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.card-btn > button {
+    font-family: 'Pretendard-Regular';
+    width: 45%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 25px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+.card-btn > button:last-child:hover {
+    border: none;
+    color: white;
+    background-color: red;
+}
