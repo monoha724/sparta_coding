@@ -7,3 +7,6 @@ react_todoList : 리액트 ToDoList 과제
 
 #23.03.02
 react_test : 리액트 test 과제 
+
+#23.03.07
+react-rtk-ver2 : 리액트+리덕스 툴킷 TodoList
