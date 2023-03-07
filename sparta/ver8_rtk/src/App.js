@@ -38,7 +38,7 @@ function App() {
         <div>
           <h2>해야 할 일</h2>
           {todoList.map((item)=>
-            !item.isDone ?
+            !item.isDone &&
               <div key={item.id}>
                 {item.edit ? 
                   <div>
@@ -76,7 +76,6 @@ function App() {
                   </div>
                 }
               </div>
-            : null
           )}
         </div>
         <hr />
@@ -84,7 +83,7 @@ function App() {
           <div>
             <h2>끝난 일</h2>
           {todoList.map((item)=>
-            item.isDone ?
+            item.isDone &&
               <div key={item.ie}>
                 <h3>{item.title}</h3>
                 <p>{item.contant}</p>
@@ -95,7 +94,6 @@ function App() {
                   dispatch(deleteTodo(item.id))
                 }}>삭제</button>
               </div>
-            : null
           )}
           </div>
         </div>
