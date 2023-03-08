@@ -10,18 +10,15 @@ const Body = styled.body`
     grid-column-gap: 25px;
     padding: 25px;
 `
-
 const H2 = styled.h2`
     font-size: 25px;
     margin-bottom: 25px;
 `
-
 const H3 = styled.h3`
     height: 25px;
     margin-bottom: 25px;
     font-weight: bold;
 `
-
 const P = styled.p`
     height: 25px;
     margin-bottom: 25px;
@@ -31,7 +28,6 @@ const CardWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
 `
-
 const Card = styled.div`
     border: 1px solid black;
     border-radius: 5px;
@@ -39,19 +35,16 @@ const Card = styled.div`
     min-height: 150px;
     position: relative;
 `
-
 const BtnDiv = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10px;
 `
-
 const Input = styled.input`
     width: 97%;
     height: 25px;
     margin-bottom: 10px;
 `
-
 const Button = styled.button`
     height: 30px;
     border: 1px solid ${(props) => props.bgColor};
