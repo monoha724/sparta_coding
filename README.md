@@ -10,3 +10,6 @@ react_test : 리액트 test 과제
 
 #23.03.07
 react-rtk-ver2 : 리액트+리덕스 툴킷 TodoList
+
+#23.03.08
+react-redux-todo : 리액트+리덕스 ToDoList 
