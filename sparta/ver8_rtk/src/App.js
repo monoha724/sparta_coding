@@ -6,9 +6,9 @@ function App() {
   const todoList = useSelector((state) => state.todo);
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
-  const [contant, setContant] = useState("");
+  const [content, setContent] = useState("");
   const [fixTitle, setFixTitle] = useState("");
-  const [fixContant, setFixContant] = useState("");
+  const [fixContent, setFixContent] = useState("");
 
 
   return (
@@ -24,13 +24,13 @@ function App() {
         }}/>
         <label htmlFor="">내용 : </label>
         <input type="text" onChange={(e)=>{
-          setContant(e.target.value);
+          setContent(e.target.value);
         }}/>
         <button onClick={(e)=>{
           e.preventDefault();
-          dispatch(newTodo({title, contant}))
+          dispatch(newTodo({title, content}))
           setTitle("");
-          setContant("");
+          setContent("");
         }}>작성</button>
       </form>
       <hr />
@@ -45,11 +45,11 @@ function App() {
                     <input value={fixTitle} onChange={(e)=>{
                       setFixTitle(e.target.value);
                     }}/>
-                    <input value={fixContant} onChange={(e)=>{
-                      setFixContant(e.target.value);
+                    <input value={fixContent} onChange={(e)=>{
+                      setFixContent(e.target.value);
                     }}/>
                     <button onClick={()=>{
-                      dispatch(fixTodo([item.id, fixTitle, fixContant]))
+                      dispatch(fixTodo({id:item.id, title:fixTitle, content:fixContent}))
                     }}>수정완료</button>
                       <button onClick={()=>{
                         dispatch(doneState(item.id))
@@ -61,11 +61,11 @@ function App() {
                   : 
                   <div>
                     <h3>{item.title}</h3>
-                    <p>{item.contant}</p>
+                    <p>{item.content}</p>
                     <button onClick={()=>{
                       dispatch(editState(item.id))
                       setFixTitle(item.title)
-                      setFixContant(item.contant)
+                      setFixContent(item.content)
                     }}>수정</button>
                     <button onClick={()=>{
                       dispatch(doneState(item.id))
@@ -86,7 +86,7 @@ function App() {
             item.isDone &&
               <div key={item.ie}>
                 <h3>{item.title}</h3>
-                <p>{item.contant}</p>
+                <p>{item.content}</p>
                 <button onClick={()=>{
                   dispatch(doneState(item.id))
                 }}>취소</button>

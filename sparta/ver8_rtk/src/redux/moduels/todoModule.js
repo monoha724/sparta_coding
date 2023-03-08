@@ -10,7 +10,7 @@ export const todoSlice = createSlice({
             state.push({
                 id: state.length + 1,
                 title: payload.title,
-                contant: payload.contant,
+                content: payload.content,
                 isDone: false,
                 edit: false,
             })
@@ -29,7 +29,7 @@ export const todoSlice = createSlice({
         },
 
         fixTodo: (state, {payload}) => {
-            return state.map((item) => item.id === payload[0] ? {...item, title: payload[1], contant: payload[2], edit: !item.edit} : item);
+            return state.map((item) => item.id === payload.id ? {...item, title: payload.title, content: payload.content, edit: !item.edit} : item);
         },
     }
 })
