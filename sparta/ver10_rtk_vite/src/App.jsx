@@ -1,7 +1,10 @@
 import api from "./axios/api";
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from "react-redux";
+import { __getTodos } from "./redux/modules/todoModule";
 
 function App() {
+  const dispatch = useDispatch();
   const [todos, setTodos] = useState(null);
   const [inputValue, setInputValue] = useState({
     title: "", content: "",
@@ -34,7 +37,7 @@ function App() {
   }
 
   useEffect(()=>{
-    fatchTodos();
+    dispatch(__getTodos())
   },[])
 
   return (
