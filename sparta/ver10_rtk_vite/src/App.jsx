@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from "./axios/api";
 import React, { useEffect, useState } from 'react';
 
 function App() {
@@ -10,24 +10,24 @@ function App() {
   const [tContent, setTContent] = useState('');
 
   const fatchTodos = async () => {
-    const { data } = await axios.get("http://localhost:4000/todos");
+    const { data } = await api.get("/todos");
     console.log(data);
     setTodos(data);
   }
 
   const postTodo = async () => {
-    axios.post("http://localhost:4000/todos", inputValue);
+    api.post("/todos", inputValue);
     // setTodos([...todos, inputValue]);
     fatchTodos();
   }
 
   const deleteTodo = async (id) => {
-    axios.delete(`http://localhost:4000/todos/${id}`);
+    api.delete(`/todos/${id}`);
     setTodos(todos.filter((item)=> item.id !== id))
   }
 
   const updateTodo = async () => {
-    axios.patch(`http://localhost:4000/todos/${tId}`, {
+    api.patch(`/todos/${tId}`, {
       title: tContent,
     });
     setTodos(todos.map((item)=> item.id == tId ? {...item, title: tContent} : item))
